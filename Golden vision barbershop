@@ -1,0 +1,18 @@
+goldenvisionbarbershop/
+│
+├── index.html          ← Home page
+├── team.html           ← Team page
+├── reviews.html        ← Reviews page
+├── styles.css          ← All styling (gold & black luxury theme)
+├── script.js           ← Booking form + links
+├── logo-placeholder.png ← Your logo (replace later)
+├── hero-placeholder.jpg ← Hero image
+├── barber-tapia.jpg     ← Team images (replace with real photos)
+├── barber-parra.jpg
+├── barber-armin.jpg
+├── barber-bryan.jpg
+├── barber-chato.jpg
+├── barber-albert.jpg
+├── barber-robert.jpg
+├── barber-oc.jpg
+├── barber-jrda.jpg
