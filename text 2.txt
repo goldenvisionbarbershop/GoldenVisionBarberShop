@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Team — Golden Vision Barbershop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="luxury">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo-placeholder.png" alt="Golden Vision Logo" class="logo" />
+        <div>
+          <h1>Golden Vision Barbershop</h1>
+          <p class="muted">Our expert team</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a id="external-booking-link-2" class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Online</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Meet the Team</h2>
+    <p class="muted">High-end barbers with skill, style, and attention to detail.</p>
+
+    <div class="team-grid">
+      <!-- Each .team-card can be replaced with a real photo (replace barber-*.jpg) -->
+      <article class="team-card">
+        <img src="barber-tapia.jpg" alt="TapiaCuts" />
+        <h3>TapiaCuts — Owner / Master Barber</h3>
+        <p class="muted">Owner & lead barber specializing in premium luxury cuts and straight-edge finishes.</p>
+        <ul class="service-list">
+          <li>Haircut — $60</li>
+          <li>Haircut & Beard — $70</li>
+          <li>Haircut & Design — $70</li>
+          <li>Haircut & Eyebrows — $70</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-parra.jpg" alt="ParraBarber" />
+        <h3>ParraBarber — Barber</h3>
+        <p class="muted">Expert in fades, pattern work, and beard shaping.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Beard — $60</li>
+          <li>Haircut & Design — $55</li>
+          <li>Haircut & Eyebrows — $55</li>
+          <li>Beard — $30</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-armin.jpg" alt="Armin" />
+        <h3>Armin — Barber</h3>
+        <p class="muted">Consistent, clean cuts and great with all hair types.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Beard — $60</li>
+          <li>Haircut & Eyebrows — $55</li>
+          <li>Beard — $30</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-bryan.jpg" alt="Bryan2Blurry" />
+        <h3>Bryan2Blurry — Barber</h3>
+        <p class="muted">Creative cuts and precise eyebrow shaping.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Eyebrows — $55</li>
+          <li>Haircut & Beard — $60</li>
+          <li>Haircut & Design — $55</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-chato.jpg" alt="ChatoBlendz" />
+        <h3>ChatoBlendz — Barber</h3>
+        <p class="muted">Specializes in blending and modern fades.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Beard — $60</li>
+          <li>Haircut & Eyebrows — $55</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-albert.jpg" alt="AlbertBlendz" />
+        <h3>AlbertBlendz — Barber</h3>
+        <p class="muted">Detail-oriented and skilled with designs.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Design — $55</li>
+          <li>Haircut & Beard — $60</li>
+          <li>Haircut & Eyebrows — $55</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-robert.jpg" alt="RobertBlendz" />
+        <h3>RobertBlendz — Barber</h3>
+        <p class="muted">Great with crisp fades and classic styles.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Beard — $55</li>
+          <li>Haircut & Design — $55</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-oc.jpg" alt="Oc_blendzzz" />
+        <h3>Oc_blendzzz — Barber</h3>
+        <p class="muted">Creative pattern work and modern cuts.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Design — $55</li>
+          <li>Haircut & Beard — $60</li>
+        </ul>
+      </article>
+
+      <article class="team-card">
+        <img src="barber-jrda.jpg" alt="Jrdabarber" />
+        <h3>Jrdabarber — Barber</h3>
+        <p class="muted">Reliable, quick, and precise.</p>
+        <ul class="service-list">
+          <li>Haircut — $45</li>
+          <li>Haircut & Beard — $60</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="muted small">Photos are placeholders — replace <code>barber-*.jpg</code> with real portraits for each barber.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year-2"></span> Golden Vision Barbershop</p>
+      <div class="social"><a href="index.html">Home</a> • <a href="reviews.html">Reviews</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

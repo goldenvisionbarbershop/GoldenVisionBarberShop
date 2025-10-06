@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Golden Vision Barbershop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="luxury">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- Replace logo-placeholder.png with your logo (gold on transparent/black recommended) -->
+        <img src="logo-placeholder.png" alt="Golden Vision Logo" class="logo" />
+        <div>
+          <h1 id="shop-name">Golden Vision Barbershop</h1>
+          <p id="shop-tagline" class="muted">Luxury by design — premium cuts & precision</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a id="external-booking-link" class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Online</a>
+        <button class="btn btn-ghost" id="call-btn">Call</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h2>Golden Vision: The Luxury Cut</h2>
+          <p class="lead">Premium service, expert barbers, and a refined atmosphere — located in Santa Ana.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="team.html">Meet the Team</a>
+            <a class="btn btn-ghost" href="#booking">Request Booking</a>
+          </div>
+          <ul class="quick-info">
+            <li><strong>Address:</strong> 3398 S Bristol St, Santa Ana, CA</li>
+            <li><strong>Hours:</strong> Mon–Sun 9:00am–7:00pm</li>
+          </ul>
+        </div>
+
+        <div class="hero-image">
+          <!-- Replace hero-placeholder.jpg with a high-quality shop photo -->
+          <img src="hero-placeholder.jpg" alt="Golden Vision interior" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container section">
+      <h3>Services Overview</h3>
+      <p class="muted">Below are common services — detailed barber-specific pricing is on the <a href="team.html">Team</a> page.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Signature Haircut</h4>
+          <p class="price">From $45</p>
+          <p>Custom cut tailored to your look — precision lines, clean finishes.</p>
+        </div>
+        <div class="service-card">
+          <h4>Haircut & Beard</h4>
+          <p class="price">From $60</p>
+          <p>Cut + beard shaping for a polished finish.</p>
+        </div>
+        <div class="service-card">
+          <h4>Design & Detailing</h4>
+          <p class="price">From $55</p>
+          <p>Detailed line work and creative designs by our specialists.</p>
+        </div>
+        <div class="service-card">
+          <h4>Eyebrows</h4>
+          <p class="price">From $30</p>
+          <p>Clean eyebrow shaping to complement the haircut.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="container section booking-section">
+      <h3>Request Booking</h3>
+      <p class="muted">Fill out the form to request an appointment — we'll confirm availability. For real-time booking, click <strong>Book Online</strong>.</p>
+
+      <form id="booking-form" class="booking-form">
+        <!-- If you use Formspree / Zapier / webhook, set FORM_ENDPOINT in script.js -->
+        <input type="hidden" name="_subject" value="New booking request — Golden Vision" />
+        <label>
+          Full name
+          <input name="name" type="text" required placeholder="Jane Doe" />
+        </label>
+
+        <label>
+          Phone or WhatsApp
+          <input name="phone" type="tel" required placeholder="(714) 928-0514" />
+        </label>
+
+        <label>
+          Email (optional)
+          <input name="email" type="email" placeholder="you@example.com" />
+        </label>
+
+        <label>
+          Preferred barber (optional)
+          <select name="barber">
+            <option value="">No preference</option>
+            <option>TapiaCuts (Owner)</option>
+            <option>ParraBarber</option>
+            <option>Armin</option>
+            <option>Bryan2Blurry</option>
+            <option>ChatoBlendz</option>
+            <option>AlbertBlendz</option>
+            <option>RobertBlendz</option>
+            <option>Oc_blendzzz</option>
+            <option>Jrdabarber</option>
+          </select>
+        </label>
+
+        <label>
+          Service
+          <select name="service" required>
+            <option>Haircut</option>
+            <option>Haircut & Beard</option>
+            <option>Haircut & Design</option>
+            <option>Haircut & Eyebrows</option>
+            <option>Beard</option>
+          </select>
+        </label>
+
+        <label>
+          Preferred date
+          <input name="date" id="date-input" type="date" required />
+        </label>
+
+        <label>
+          Preferred time
+          <input name="time" id="time-input" type="time" required />
+        </label>
+
+        <label>
+          Notes (optional)
+          <textarea name="notes" placeholder="Any preferences, style reference, or requests"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Request Booking</button>
+          <button type="button" id="clear-book" class="btn btn-ghost">Clear</button>
+        </div>
+
+        <p id="booking-message" class="muted small"></p>
+      </form>
+
+      <aside class="booking-help">
+        <h4>Quick contact</h4>
+        <p>Call or WhatsApp: <a id="phone-link" href="tel:+17149280514">+1 (714) 928-0514</a></p>
+        <p>Email: <a href="mailto:Zavalajr567@gmail.com">Zavalajr567@gmail.com</a></p>
+        <p>Real-time booking: <a id="live-book-text" href="#" target="_blank">Open booking app</a></p>
+      </aside>
+    </section>
+
+    <section id="contact" class="container section">
+      <h3>Contact & Location</h3>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Address:</strong> 3398 S Bristol St, Santa Ana, CA</p>
+          <p><strong>Phone:</strong> <a href="tel:+17149280514">+1 (714) 928-0514</a></p>
+          <p><strong>Email:</strong> <a href="mailto:Zavalajr567@gmail.com">Zavalajr567@gmail.com</a></p>
+          <p><strong>Hours:</strong> Monday–Sunday 9AM–7PM</p>
+          <p><a href="team.html">Meet our barbers</a> • <a href="reviews.html">Read client reviews</a></p>
+        </div>
+
+        <div class="map-wrap">
+          <!-- Replace the src with your Google Maps iframe for precise pin -->
+          <iframe
+            title="Golden Vision map"
+            width="100%" height="220"
+            src="https://www.google.com/maps?q=3398+S+Bristol+St+Santa+Ana+CA&output=embed"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year"></span> Golden Vision Barbershop — All rights reserved.</p>
+      <div class="social">
+        <a href="#" id="insta-link">Instagram</a>
+        <a href="#" id="yelp-link">Yelp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

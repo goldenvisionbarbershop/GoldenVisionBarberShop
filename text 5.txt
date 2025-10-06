@@ -1,0 +1,77 @@
+// Golden Vision site JS
+// IMPORTANT: Replace FORM_ENDPOINT and BOOKING_LINK below with your real endpoints/links.
+
+const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; // ← replace with your formspree / webhook URL
+const BOOKING_LINK = "https://your-booking-link.example.com"; // ← replace with your real booking app / booking page URL
+const GOOGLE_REVIEW_LINK = "#"; // ← replace with your Google review URL
+const YELP_REVIEW_LINK = "#"; // ← replace with your Yelp review URL
+
+document.addEventListener("DOMContentLoaded", () => {
+  // dynamic text
+  const year = new Date().getFullYear();
+  const phones = document.querySelectorAll("#phone-link, #call-btn");
+  document.getElementById("current-year")?.textContent = year;
+  document.getElementById("current-year-2")?.textContent = year;
+  document.getElementById("current-year-3")?.textContent = year;
+
+  // set booking links
+  const bookLinks = document.querySelectorAll("#external-booking-link, #external-booking-link-2, #external-booking-link-3, #live-book-text");
+  bookLinks.forEach(a => {
+    a.href = BOOKING_LINK;
+    if (BOOKING_LINK === "#" || BOOKING_LINK === "") {
+      a.setAttribute("aria-disabled", "true");
+    }
+  });
+
+  // set review links
+  const gLink = document.getElementById("google-reviews-link");
+  const yLink = document.getElementById("yelp-reviews-link");
+  if (gLink) gLink.href = GOOGLE_REVIEW_LINK;
+  if (yLink) yLink.href = YELP_REVIEW_LINK;
+
+  // phone button (calls)
+  document.getElementById("call-btn")?.addEventListener("click", () => {
+    window.location.href = "tel:+17149280514";
+  });
+
+  // booking form behavior
+  const form = document.getElementById("booking-form");
+  const messageEl = document.getElementById("booking-message");
+  if (form) {
+    // set min date to today
+    const dateInput = document.getElementById("date-input");
+    if (dateInput) {
+      const today = new Date().toISOString().split("T")[0];
+      dateInput.setAttribute("min", today);
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      messageEl.textContent = "Sending booking request…";
+
+      // minimal validation already provided by HTML attributes
+      const data = new FormData(form);
+
+      try {
+        const resp = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+
+        if (resp.ok) {
+          messageEl.textContent = "Thanks — booking request sent! We'll reach out to confirm.";
+          form.reset();
+        } else {
+          const json = await resp.json().catch(()=>null);
+          messageEl.textContent = json && json.error ? `Error: ${json.error}` : "Could not send booking. Try again or call us.";
+        }
+      } catch (err) {
+        console.error(err);
+        messageEl.textContent = "Network error — please call or message us instead.";
+      }
+    });
+
+    document.getElementById("clear-book")?.addEventListener("click", () => form.reset());
+  }
+});
